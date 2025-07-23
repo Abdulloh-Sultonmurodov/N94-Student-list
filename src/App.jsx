@@ -1,5 +1,6 @@
 import { useStudent } from "./context/Context";
 import SaveIcon from "./assets/images";
+import { Toaster } from "react-hot-toast";
 
 const students = [
   {
@@ -138,6 +139,8 @@ const App = () => {
 
   return (
     <div className="pt-[20px]">
+      <Toaster position="top-center" reverseOrder={false} />
+
       <div className="flex justify-between items-center mx-auto px-[80px] mb-[40px]">
         <h1 className="text-center font-extrabold text-[60px]">
           N94 Students' list

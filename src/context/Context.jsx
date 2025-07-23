@@ -1,5 +1,5 @@
-// StudentContext.jsx
 import { createContext, useState, useContext } from "react";
+import toast from "react-hot-toast";
 
 const StudentContext = createContext();
 
@@ -9,6 +9,8 @@ export const StudentProvider = ({ children }) => {
   const [savedStudents, setSavedStudents] = useState([]);
 
   const handleStudentClick = (id) => {
+    toast.success("Successfully saved!");
+
     setSavedStudents((prev) => (prev.includes(id) ? prev : [...prev, id]));
   };
 
