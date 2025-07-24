@@ -145,15 +145,20 @@ const App = () => {
         <h1 className="text-center font-extrabold text-[60px]">
           N94 Students' list
         </h1>
-        <button
-          onClick={handleSaveClick}
-          className="relative w-[50px] h-[50px] cursor-pointer hover:text-[red]"
-        >
-          <img src={SaveIcon} alt="Save images" width={40} height={40} />
-          <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-            {savedStudents.length}
-          </span>
-        </button>
+        <div className="flex gap-[30px] items-center">
+          <button
+            onClick={handleSaveClick}
+            className="relative w-[50px] h-[50px] cursor-pointer hover:text-[red]"
+          >
+            <img src={SaveIcon} alt="Save images" width={40} height={40} />
+            <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+              {savedStudents.length}
+            </span>
+          </button>
+          <button className="py-[15px] w-[100px] font-bold text-[15px] cursor-pointer hover:bg-blue-500 duration-300 hover:scale-110 hover:text-white bg-yellow-500 rounded-[20px]">
+            Create
+          </button>
+        </div>
       </div>
       <div className="flex flex-wrap gap-[60px] mx-auto justify-center px-[30px]">
         {students.map((item, index) => (
